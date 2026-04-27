@@ -3,14 +3,14 @@ import User from "../models/user.js";
 
 //API Controller Function to manage clerk user with database
 
-const clerkWebhooks = async (req, res) => {
+export const clerkWebhooks = async (req, res) => {
    try {
     const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
 
     await whook.verify(JSON.stringify(req.body), {
-        "svix_id": req.headers['svix-id'],
-        "svix-timestamp": req.headers['svix-timestamp'],
-        "svix-signature": req.headers['svix-signature'],
+        "svix_id": req.headers["svix-id"],
+        "svix-timestamp": req.headers["svix-timestamp"],
+        "svix-signature": req.headers["svix-signature"]
     })
 
     const {data, type} = req.body
@@ -52,5 +52,3 @@ const clerkWebhooks = async (req, res) => {
     res.json({success: false, message: error.message})
    }
 }
-
-export { clerkWebhooks }
