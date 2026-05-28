@@ -11,7 +11,7 @@ const PORT = 4000;
 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5173','http://localhost:5174'],
+    origin: ['https://learning-management-system-q3jkc81h6.vercel.app','https://learning-management-system-dgz7-opsd0gte9.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
