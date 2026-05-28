@@ -120,7 +120,7 @@ const Navbar = () => {
                         </div>
 
                         <a
-                            href="http://localhost:5174"
+                            href="https://learning-management-system-dgz7-opsd0gte9.vercel.app"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hidden md:flex bg-purple-600 hover:bg-purple-700 transition text-white px-4 py-2 rounded-lg font-medium"
